@@ -1,7 +1,7 @@
 /* eslint-disable no-template-curly-in-string */
 module.exports = {
   branches: ['main'],
-  extends: ['semantic-release-monorepo']
+  extends: ['semantic-release-monorepo'],
   plugins: [
     '@semantic-release/commit-analyzer',
     '@semantic-release/release-notes-generator',
