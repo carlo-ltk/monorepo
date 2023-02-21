@@ -25,11 +25,11 @@ jobs:
         with:
           working_directory: ./one
         env:
-          GITHUB_TOKEN: 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
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
       - name: Release (two)
         if: ( github.event_name == 'push' && github.ref == 'refs/heads/main' )
         uses: cycjimmy/semantic-release-action@v3
         with: 
           working_directory: ./two
         env:
-          GITHUB_TOKEN: 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
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
