@@ -1,3 +1,10 @@
+# [one-v1.1.0](https://github.com/carlo-ltk/monorepo/compare/one-v1.0.0...one-v1.1.0) (2023-02-21)
+
+
+### Features
+
+* **one:** add index.js ([9fbde72](https://github.com/carlo-ltk/monorepo/commit/9fbde724af9f978f876a7b4e04781f04f9c5c330))
+
 # one-v1.0.0 (2023-02-21)
 
 
