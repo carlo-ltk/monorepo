@@ -18,12 +18,14 @@ jobs:
       - name: Release (one)
         if: ( github.event_name == 'push' && github.ref == 'refs/heads/main' )
         uses: cycjimmy/semantic-release-action@v3
-        working_directory: ./one
+        with:
+          working_directory: ./one
         env:
           GITHUB_TOKEN: ${{ secrets.BOT_TOKEN }}
       - name: Release (two)
         if: ( github.event_name == 'push' && github.ref == 'refs/heads/main' )
         uses: cycjimmy/semantic-release-action@v3
-        working_directory: ./two
+        with: 
+          working_directory: ./two
         env:
           GITHUB_TOKEN: ${{ secrets.BOT_TOKEN }}
