@@ -1,0 +1,29 @@
+name: build
+
+on:
+  push:
+    branches:
+      - main
+
+defaults:
+  run:
+    shell: bash
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v3
+      - name: Release (one)
+        if: ( github.event_name == 'push' && github.ref == 'refs/heads/main' )
+        uses: cycjimmy/semantic-release-action@v3
+        working_directory: ./one
+        env:
+          GITHUB_TOKEN: ${{ secrets.BOT_TOKEN }}
+      - name: Release (two)
+        if: ( github.event_name == 'push' && github.ref == 'refs/heads/main' )
+        uses: cycjimmy/semantic-release-action@v3
+        working_directory: ./two
+        env:
+          GITHUB_TOKEN: ${{ secrets.BOT_TOKEN }}
